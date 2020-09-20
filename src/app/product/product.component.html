@@ -1,0 +1,18 @@
+<div class="container">
+  <h3 class="font-weight-bold text-center border shadow p-3">Product</h3>
+  <a routerLink="/addItem" class="text-primary">Add Items</a>
+  <h1>Add To cart</h1>
+  <div class="row">
+
+
+      <ul class="list-group col-md-3" *ngFor="let list of cart">
+        <li class="list-group-item ">Item:-{{list.name}}</li>
+        <li class="list-group-item ">Qty:-{{list.qty}}</li>
+      <li class="list-group-item ">Amount:-{{list.qty * list.price}}</li>
+      <hr>
+    </ul>
+
+</div>
+<button type="button" class="btn btn-primary rounded-0" name="button">Total Amt:-{{calculate()}}</button>
+
+<app-child-product *ngFor="let item of product" [data]="item" (product)="addtocart($event)"></app-child-product>

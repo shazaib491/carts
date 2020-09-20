@@ -1,0 +1,22 @@
+
+<div class="container">
+<h1>Product</h1>
+<div class="d-flex justify-content-around">
+  <button type="button" class="btn btn-primary rounded-0" name="button"><i class="fa fa-shopping-cart"></i>{{cnt}}</button>
+  <button type="button" class="btn btn-primary rounded-0" name="button">Total Amount:{{calculate()}}-</button>
+</div>
+<div class="row">
+  <div class="col-md-3 m-auto" *ngFor="let item of cart">
+    <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title text-center">{{item.name}}</h5>
+    <h5 class="card-subtitle mb-2 text-muted">Qty:-{{item.qty}}</h5>
+    <h5 class="card-text">Price:-{{item.price}}.</h5>
+    <hr>
+    <h5 class="card-text">{{item.qty*item.price}}.</h5>
+  </div>
+</div>
+  </div>
+</div>
+</div>
+<app-child  [store]="list" *ngFor="let list of shop" class="d-inline-block ml-3 p-5" (addtoCart)="cartDetail($event)" ></app-child>

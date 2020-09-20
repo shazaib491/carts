@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-md-3">
+    <div class="card" style="width:18rem;">
+      <div class="card-body">
+        <h5 class="card-title text-center">{{data.name}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Qty:-{{data.qty}}</h6>
+        <h5 class="card-text">Price :-{{data.price}}</h5>
+        <div class="text-center">
+          <a href="javascript:void(0)" class="card-link border p-2" (click)="incQty()" >Increase</a>
+          <a href="javascript:void(0)" class="card-link border p-2" (click)="decQty()" >Decrease</a>
+          <hr>
+          <h6 class="card-subtitle mb-2 text-muted">Amount:-{{data.qty*data.price}}</h6>
+          <button type="button" name="button" class="btn btn-primary rounded-0" (click)="Addtocart()" >{{isadded?'Remove to Cart':'Add To Cart'}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

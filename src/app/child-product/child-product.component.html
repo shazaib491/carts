@@ -1,0 +1,26 @@
+<div class="container">
+
+  <div class="row mt-3">
+    <div class="col-md-12 text-center m-auto border ">
+    </div>
+    <div class="col-md-4 m-auto">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body shadow border border-primary">
+          <h5 class="card-title text-center"><u>{{items.name}}</u></h5>
+          <p class="card-text "><label class="mr-auto" >P.Qty:-</label><span class="ml-3"  >{{items.qty}}</span></p>
+          <p class="card-text "><label>P.price:-</label><span class="ml-3" >{{items.price}}</span></p>
+          <div class="d-flex justify-content-around p-3" >
+            <button type="button" (click)="setqty()" class="btn btn-info" name="button">Increase</button>
+            <button type="button" (click)="decqty()" class="btn btn-danger" name="button">Decrease</button>
+          </div>
+          <div class="text-center p-3">
+            <button type="button" (click)="addtocart(items)" class="btn btn-danger">{{isadd?'RemoveToCart':'AddToCart'}}</button>
+
+          </div>
+
+          <a href="#" class="btn btn-info mx-auto rounded-0 d-block">Amount :- {{items.qty* items.price}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-6  m-auto">
+      <form #item="ngForm" (ngSubmit)="onSubmit(item.value)" class="border shadow-lg p-5">
+        <h1 class="text-center" >Add Item</h1>
+
+        <div class="form-group">
+          <label for="">Name</label>
+          <input type="text" name="name" class="form-control" placeholder="Enter Item Name" ngModel value="">
+        </div>
+        <div class="form-group">
+          <label for="">Qty</label>
+          <input type="text" name="qty" placeholder="Enter Qty" class="form-control" ngModel value="">
+        </div>
+        <div class="form-group">
+          <label for="">Price</label>
+          <input type="text" name="price" class="form-control"  placeholder="Enter Price" ngModel value="">
+        </div>
+        <button type="submit" class="btn btn-block btn-primary rounded-0" name="button">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
